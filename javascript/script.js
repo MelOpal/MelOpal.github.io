@@ -63,7 +63,7 @@ window.onload = function () {
     flavorIcon.setAttribute("src", flavorIconDefault);
   }
 
-  document.querySelector(".flavor").addEventListener("mouseleave", switchIconBack);
+  document.querySelectorAll(".flavor").forEach(flavor => flavor.addEventListener("mouseleave", switchIconBack));
 
 
   //Event Listeners - Click Name Button
