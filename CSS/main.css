@@ -161,6 +161,10 @@ h2, h3, h4, h5, h6 {
 		margin-top: 75px;
 	}
 
+	.tagline {
+		width: 100%;
+	}
+
 	.cone-drawing {
 		border-top-left-radius: 75px;
 		border-top-right-radius: 75px;
@@ -398,6 +402,7 @@ h2, h3, h4, h5, h6 {
 	.customer-review {
 		margin-top: 15px;
 		height: 250px;
+		width: 100%;
 	}
 
 	.customer-review h4 {
