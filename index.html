@@ -2,13 +2,13 @@
 <html class="no-js" lang="en">
 
   <head>
-	<meta charset="utf-8">
-	<title>SCOOPS: Organic Ice Cream Treats</title>
-	<meta name="description" content="SCOOPS - Organic Ice Cream Treats">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<title>SCOOPS: Organic Ice Cream Treats</title>
+		<meta name="description" content="SCOOPS - Organic Ice Cream Treats">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/main.css">
+		<script type="text/javascript" src="javascript/script.js"></script>
+		<link rel="stylesheet" href="css/main.css">
   </head>
 
   <body>
@@ -17,12 +17,11 @@
 			<div class="nav-bar">
 				<img src="images/ScoopsLogo.png" alt="Scoops: Organic Ice Cream Treats" class="logo-nav">
 				<div class="nav-items">
-					<div class="flavors-nav">FLAVORS</div>
-					<div class="where-buy-nav">WHERE TO BUY</div>
-					<div class="about-us-nav">ABOUT US</div>
+					<div class="nav-name flavors-nav"><a href="#iceCreamFlavorsMain">FLAVORS</a></div>
+					<div class="nav-name ingredients-nav"><a href="#ingredient">INGREDIENTS</a></div>
+					<div class="nav-name store-nav">STORE</div>
 				</div>
-			</div>		
-
+			</div>
 
 <!-- Tagline -->
 	<secion>
@@ -36,35 +35,36 @@
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
 			</div>
 		</div>
+		<div class="stripes-2"></div>
 	</secion>
 
 
 <!-- Flavors -->
-	<div class="ice-cream-flavors-main">
+	<section class="ice-cream-flavors-main" id="iceCreamFlavorsMain">
 			<div class="ice-cream-flavors-1">
-				<div class="ice-cream-pics">
-					<img src="images/BerryGood.jpg">
+				<div class="ice-cream-pics" id="iceCreamPics">
+					<img class="ice-cream-scoop" src="images/Ice-Cream-Packaging.jpg">
 				</div>
-				<div class="ice-cream-descr">
-					<h2>Berry Good</h2>
-					<p> The freshest of berries enveloped in a creamy vanilla ice cream. </p>
+				<div class="ice-cream-text">
+					<h2 id="iceCreamHead"></h2>
+					<p id="iceCreamDescr">All of our flavors are available in pints and gallons. Ask your local grocer to stock up!</p>
 				</div>
 			</div>
 			<div class="ice-cream-flavors-2">
 				<div class="flavor-icon">
-					<img class="flavor-icon-move" src="images/IceCreamCones_2.png" alt="2 Ice Cream Cones">
+					<img class="flavor-icon-change" src="images/IceCreamCones_2.png" alt="2 Ice Cream Cones">
 				</div>
 				<h3>Pick a Flavor</h3>
 				<div class="flavor-list">
-					<div class="flavor strawberry">BERRY GOOD</div>
-					<div class="flavor vanilla">MINI VANILLI</div>
-					<div class="flavor chocolate">A LOTTA CHOCOLAT</div>
-					<div class="flavor cookies-cream">COOKIES & CREAM</div>
-					<div class="flavor fudge-swirl">GIVE IT A SWIRL</div>
-					<div class="flavor cookie-dough">OH, COOKIE DOUGH!</div>
+					<button class="flavor strawberry">BERRY GOOD</button>
+					<button class="flavor vanilla">MINI VANILLI</button>
+					<button class="flavor chocolate">A LOTTA CHOCOLAT</button>
+					<button class="flavor cookies-cream">COOKIES & CREAM</button>
+					<button class="flavor fudge-swirl">GIVE IT A SWIRL</button>
+					<button class="flavor cookie-dough">OH, COOKIE DOUGH!</button>
 				</div>
 			</div>
-	</div>
+	</section>
 
 
 <!-- Reviews -->
@@ -86,31 +86,68 @@
 
 
 <!-- Ingredients -->
-<div class="ingredients">
+<div class="ingredients" id="ingredient">
 	<div class="ingredient-text">
 		<h5>Only the Best</h5>
 		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-		<a class="learn-more" href="#">Learn More</a>
+		<button class="learn-more">Learn More</button>
 	</div>
 	<div class="base-ingred">
-		<div class="base milk">1</div>
-		<div class="base cream">2</div>
-		<div class="base sugar">3</div>
-		<div class="base love">4</div>
+		<div class="base milk">
+			<img src="images/milk-bottle.png" alt="Milk Bottle">
+			<p>Milk</p>
+		</div>
+		<div class="base cream">
+			<img src="images/cream.png" alt="Whipped Cream">
+			<p>Cream</p>
+		</div>
+		<div class="base sugar">
+			<img src="images/sugar.png" alt="Sugar Cubes">
+			<p>Sugar</p>
+		</div>
+		<div class="base love">
+			<img src="images/heart.png" alt="Heart">
+			<p>Love</p>
+		</div>
 	</div>
 </div>
 
 
 
-<div class="stripes-1"></div>
+<div class="stripes-2"></div>
 
 
-<!-- About Us -->
-<!-- 	<section class="about-us">
-		<p> We all need ice cream in our lives, or at least that's what SCOOPS believes. Started in a small kitchen by two best friends, SCOOPS...
-			
-		</p>
-	</section> -->
+<!-- Footer -->
+ <div class="footer-all">
+ 	<div class="newsletter-sign">
+ 		<h6>The Latest Scoop</h6>
+ 		<p>Sign up for our newsletters. Recieve the latest news and deals from SCOOPS. </p>
+ 		<div>
+ 			<form id="newsletterSignPage">
+ 				<input type="text" placeholder="Email Address" id="emailInput">
+ 				<button id="submitBtn">SUBMIT</button>
+ 			</form>
+ 		</div>
+ 	</div>
+ 	<div class="additional-info">
+	 	<div class="more-info">
+	 		<div class="more-info-list">Our Company</div>
+	 		<div class="more-info-list">Contact Us</div>
+	 		<div class="more-info-list">FAQs</div>
+	 		<div class="more-info-list">Where to Buy</div>
+	 	</div>
+	 	<div class="social-header">
+ 			<h6>Join the Ice Cream Social!</h6>
+ 			<div class="social-list-main">
+ 				<div class="social-list-sub"><img src="images/FB-Icon.png" alt="Facebook"></div>
+ 				<div class="social-list-sub"><img src="images/IG-Icon.png" alt="Instagram"></div>
+ 				<div class="social-list-sub"><img src="images/Twitter-Icon.png" alt="Twitter"></div>
+ 				<div class="social-list-sub"><img src="images/Pinterest-Icon.png" alt="Pinterest"></div>
+ 			</div>
+ 		</div>
+ 	</div>
+ </div>
+
 
   </body>
 

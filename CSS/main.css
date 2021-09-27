@@ -7,22 +7,21 @@
 	Dark Blue: 002F70;
 	*/
 
-/*@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@300;400&display=swap');*/
-
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Montserrat:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Montserrat:wght@400;600&display=swap');
 
 body {
 	font-family: "Monstserrat", sans-serif;
 	font-size: 18px;
 	color: #002F70;
+	margin: 0;
 }
 
 h1 {
 	font-family: 'Londrina Solid', cursive;
 }
 
-h2, h3, h4, h5 {
-	font-family: 'Londrina Solid', cursive;;
+h2, h3, h4, h5, h6 {
+	font-family: 'Londrina Solid', cursive;
 	font-size: 35px;
 }
 
@@ -34,7 +33,11 @@ h2, h3, h4, h5 {
 	align-items:  center;
 	justify-content: center;
 	height: 250px;
-/*	background-color: #E3FFDC;*/
+}
+
+.logo-nav {
+	padding-bottom: 25px;
+	height: 100px;
 }
 
 .nav-items {
@@ -43,51 +46,73 @@ h2, h3, h4, h5 {
 	font-size: 16px;
 }
 
-.logo-nav {
-	padding-bottom: 25px;
-	height: 100px;
-}
-
-.flavors-nav{
+.nav-name {
 	text-align: center;
 	padding: 0 10px;
-	width: 100px;
+	width: 125px;
+	text-decoration: none;
+	color: #002F70;
 }
 
-.flavors-nav:hover {
+.nav-name a {
+	text-decoration: none;
+	color: #002F70;
+}
+
+.flavors-nav a:hover {
 	text-decoration: underline 10px #E3FFDC;
-	font-weight: bold;
+	font-weight: 600;
 }
 
-.where-buy-nav{
-	text-align: center;
-	padding: 0 10px;
-	width: 150px;
-}
 
-.where-buy-nav:hover {
+.ingredients-nav a:hover {
 	text-decoration: underline 10px #F275D4;
-	font-weight: bold;
+	font-weight: 600;
 }
 
-.about-us-nav{
-	text-align: center;
-	padding: 0 10px;
-	width: 100px;
-}
 
-.about-us-nav:hover {
+.store-nav:hover {
 	text-decoration: underline 10px #CCCCFF;
-	font-weight: bold;
+	font-weight: 600;
+}
+
+/* Navigation - Responsive */
+
+@media (max-width: 768px) {
+	.nav-bar {
+		flex-direction: row;
+		justify-content: space-between;
+		height: 75px;
+		margin: 0;
+		position:  fixed;
+		top: 0;
+		background-color: white;
+	}
+
+	.logo-nav {
+		padding-bottom: 0;
+		height: 50px;
+	}
+
+	.nav-items {
+		justify-content: flex-start;
+		font-size: 14px;
+	}
+
+	.nav-name {
+		padding: 0;
+		width: 100px;
+	}
+
 }
 
 /* Tagline */
 
-.stripes-1 {
-	background-image: url("../images/stripes-2.jpg");
+.stripes-1, .stripes-2 {
+	background-image: url("../images/stripes-3.jpg");
  	background-position: center center;
  	background-size: cover;
-	height:  50px;
+	height: 20px;
 }
 
 .tagline {
@@ -132,6 +157,10 @@ h2, h3, h4, h5 {
 /* Tagline - Responsive*/
 
 @media (max-width: 768px) {
+	.stripes-1 {
+		margin-top: 75px;
+	}
+
 	.cone-drawing {
 		border-top-left-radius: 75px;
 		border-top-right-radius: 75px;
@@ -173,27 +202,35 @@ h2, h3, h4, h5 {
 	align-items: center;
 	flex-direction: column;
 	margin: 25px;
-	width: 35%;
+	width: 400px;
 }
 
-.ice-cream-descr {
+.ice-cream-text {
 	display: inline-block;
 	text-align: center;
 }
 
-.ice-cream-descr h2 {
-	margin: 0;
+#iceCreamHead {
+	margin: 15px 0 5px 0;
+	width: 375px;
+	height: 40px;
 }
 
-.ice-cream-pics img {
+#iceCreamDescr {
+	margin: 0;
+	width: 375px;
+	height: 50px;
+}
+
+.ice-cream-pics {
 	height: 400px;
 }
 
-.flavor-icon {
- 
+.ice-cream-scoop {
+	height: 400px;
 }
 
-.flavor-icon-move {
+.flavor-icon-change {
 	height: 125px;
 }
 
@@ -210,6 +247,8 @@ h2, h3, h4, h5 {
 	background-color: #CCCCFF;
 	padding: 5px;
 	border: 2px solid transparent;
+	transition: 0.2s ease-in-out;
+	color: #002F70;
 }
 
 .flavor:hover {
@@ -228,19 +267,19 @@ h2, h3, h4, h5 {
 }
 
 .vanilla {
-	background-color: #E3FFDC;
+	background-color: #FFFCD7;
 }
 
 .vanilla:hover {
-	border-color: #E3FFDC;
+	border-color: #FFFCD7;
 }
 
 .chocolate {
-	background-color: #CCCCFF;
+	background-color: #E0CBB8;
 }
 
 .chocolate:hover {
-	border-color: #CCCCFF;
+	border-color: #E0CBB8;
 }
 
 .cookies-cream {
@@ -252,19 +291,19 @@ h2, h3, h4, h5 {
 }
 
 .fudge-swirl {
-	background-color: #E0CBB8;
+	background-color: #E3FFDC;
 }
 
 .fudge-swirl:hover {
-	border-color: #E0CBB8;
+	border-color: #E3FFDC;
 }
 
 .cookie-dough {
-	background-color: #FFFCD7;
+	background-color: #CCCCFF;
 }
 
 .cookie-dough:hover {
-	border-color: #FFFCD7;
+	border-color: #CCCCFF;
 }
 
 
@@ -277,6 +316,10 @@ h2, h3, h4, h5 {
 		align-items: center;
 		flex-direction: column-reverse;
 		margin-top: 25px;
+	}
+
+	.flavor-icon-change {
+		display: none;
 	}
 
 	.ice-cream-flavors-1 {
@@ -293,8 +336,12 @@ h2, h3, h4, h5 {
 	.flavor-list {
 		display: grid;
 		grid-template-columns: 150px 150px 150px;
-		gap: 10px 5px;
+		gap: 10px;
 		font-size: 13px;
+	}
+
+	.flavor {
+		padding: 3px;
 	}
 
 }
@@ -302,14 +349,12 @@ h2, h3, h4, h5 {
 
 /* Reviews */
 
-
 .customer-review {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-color: #99ECFF;
-	margin: 10px 0;
 	height: 250px;
 }
 
@@ -322,7 +367,7 @@ h2, h3, h4, h5 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width:  500px;
+	width: 500px;
 }
 
 .rev-name-score-1 {
@@ -330,20 +375,20 @@ h2, h3, h4, h5 {
 	justify-content: space-between;
 	align-items: center;
 	margin: 10px 0 20px 0;
-	width: 500px;
-	font-weight: bold;
+	width: 100%;
+	font-weight: 600;
 }
 
 
 .review-score-1 {
-   display: inline-flex;
+   display: flex;
    align-items: center;
 }
 
 
 .review-score-1 img {
 	height: 15px;
-	margin-left: 10px;
+	margin-right: 15px;
 }
 
 /* Reviews - Responsive*/
@@ -365,10 +410,6 @@ h2, h3, h4, h5 {
 		margin-top: 20px;
 	}
 
-	.rev-name-score-1 {
-		width: 400px;
-	}
-
 }
 
 /* Ingredients */
@@ -382,26 +423,276 @@ h2, h3, h4, h5 {
 }
 
 .ingredient-text {
-	width: 30%;
-	/*margin-left: 10px;*/
+	width: 400px;
 }
 
 .ingredient-text h5 {
 	margin: 0 0 20px 0;
 }
 
+.learn-more {
+	text-decoration: none;
+  background-color: #002F70;
+  padding: 8px;
+  width: 125px;
+  color: white;
+  border: 2px solid transparent;
+  font-size: 16px;
+  transition: 0.2s ease-in-out;
+}
+
+.learn-more:hover {
+  background-color: white;
+  color: #002F70;
+  border: 2px solid #002F70;
+  font-weight: 600;
+}
+
 .base-ingred {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	align-items: center;
-	flex-wrap:  wrap;
-	padding-left: 35px;
-	width: 30%;
+	text-align: center;
+	gap: 10px 0;
 }
 
 .base {
-	margin: 35px;
-	background-color
+	margin: 25px 0;
+	height: 100px;
+	width: 150px;
 }
+
+.base img {
+	margin:  0;
+	height: 100px;
+}
+
+.base p {
+	margin: 5px 0;
+}
+
+/* Ingredients -Rsponsive*/
+
+@media (max-width: 768px) {
+	.ingredients {
+		flex-direction: column;
+		margin: 45px;
+		height: 325px;
+		text-align: justify;
+	}
+
+	.ingredients h5 {
+		text-align: center;
+	}
+
+	.ingredient-text {
+		width: 400px;
+	}
+
+	.base-ingred {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		align-items: start;
+		padding-left: 0px;
+		margin-top: 20px;
+	}
+
+	.base {
+		padding: 5px;
+		margin-top: 15px;
+		margin-left: 0;
+		width: 100px;
+		height: 75px;
+	}
+
+	.base img {
+		height: 75px;
+	}
+
+}
+
+
+/* Footer */
+
+.footer-all {
+	background-color: #E3FFDC;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.newsletter-sign {
+	display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 350px;
+  margin-left: 35px;
+  font-size: 16px;
+}
+
+h6 {
+	font-size: 30px;
+	margin: 10px 0;
+}
+
+
+#emailInput {
+	outline: 0;
+	height: 30px;
+	width: 240px;
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+	border-bottom: 2px solid #002F70;
+	background-color: #E3FFDC;
+}
+
+
+#submitBtn {
+  background-color: #002F70;
+  padding: 8px;
+  width: 75px;
+  color: white;
+  border: 2px solid transparent;
+  margin-left: 5px;
+  transition: 0.2s ease-in-out;
+}
+
+#submitBtn:hover {
+  background-color: white;
+  color: #002F70;
+  border: 2px solid #002F70;
+  font-weight: 600;
+}
+
+.additional-info {
+	display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 50px 0px 50px 50px;
+}
+
+.more-info {
+	display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.more-info-list {
+	width: 150px;
+	padding: 10px 0;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.more-info-list:nth-child(2) {
+	width: 125px;
+}
+
+.more-info-list:nth-child(3) {
+	width: 75px;
+}
+
+.more-info-list:hover {
+	font-weight: 600;
+	text-decoration: underline 10px #F275D4;
+}
+
+.social-list-main {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.social-list-sub {
+	height: 25px;
+	margin-right: 10px;
+	height: 35px;
+}
+
+.social-list-sub img{
+	height: 35px;
+}
+
+
+/* Footer - Responsive */
+
+@media (max-width: 768px) {
+	.stripes-2 {
+		margin-top: 0;
+	}
+
+
+	.footer-all {
+		flex-direction: column;
+		height: 550px;
+	}
+
+	h6 {
+		font-size: 30px;
+		margin: 0
+	}
+
+	.newsletter-sign {
+	  margin-top: 35px;
+	  margin-left: 0;
+	}
+
+	.additional-info {
+		justify-content: center;
+		align-items: center;
+		flex-direction: column-reverse;
+	  margin: 40px 10px;
+	  width: 100%;
+	}
+
+	.social-list-main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.social-list-sub {
+		height: 25px;
+		margin: 10px 20px 0 0;
+	}
+
+	.more-info {
+		justify-content: center;
+  	align-items: center;
+		flex-direction: column;
+		margin-top: 40px;
+		width: 100%;
+	}
+
+	.more-info-list {
+		text-align: center;
+		font-size: 22px;
+		margin: 0 10px;
+		background-color: #FFFCD7;
+		border-bottom: 1px solid black;
+		width: 100%;
+	}
+
+	.more-info-list:nth-child(1) {
+		border-top: 1px solid black;
+	}
+
+	.more-info-list:nth-child(2) {
+		width: 100%;
+	}
+
+	.more-info-list:nth-child(3) {
+		width: 100%;
+	}
+
+	.more-info-list:hover {
+		text-decoration: none;
+	}
+}
+
 
 
